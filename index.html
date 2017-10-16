@@ -10,8 +10,17 @@
       RPG - Ghorvelboz / Laroon
     </h1>
     
-    <input type="text">What is your namme?:</input>
-        
+    What is thy name?:<input id="name" type="text" />
+    <input type="Submit" onClick="greet()"/>
+	
+	<div id="greeting"></div>
+	
+	<script>
+		function greet(name){
+			charName = document.getElementById("name").value;
+			document.getElementById("greeting").innerHTML = "Hello " + charName;
+		}
+	</script>
+	
   </body>
 </html>
-
