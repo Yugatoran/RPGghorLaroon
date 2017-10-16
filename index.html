@@ -16,9 +16,23 @@
 	<div id="greeting"></div>
 	
 	<script>
+		
+		var charName = "";
+		var weaponName = "";
+		
 		function greet(name){
-			charName = document.getElementById("name").value;
-			document.getElementById("greeting").innerHTML = "Hello " + charName;
+			
+			if (charName == "")
+			{
+				charName = document.getElementById("name").value;
+				document.getElementById("greeting").innerHTML = "Hello, " + charName + "." + " What weapon do you want to yield?";
+				document.getElementById("name").value = "";
+			}
+			else if (weaponName == "")
+			{
+				weaponName = document.getElementById("name").value;
+				document.getElementById("greeting").innerHTML = charName + ", you are now wielding " + weaponName + ".";
+			}
 		}
 	</script>
 	
